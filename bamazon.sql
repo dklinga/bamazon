@@ -3,7 +3,7 @@ CREATE DATABASE bamazon;
 
 USE bamazon;
 
-CREATE TABLE auctions(
+CREATE TABLE products(
   id INT NOT NULL AUTO_INCREMENT,
   product_name VARCHAR(100),
   department_name VARCHAR(100),
