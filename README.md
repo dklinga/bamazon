@@ -35,7 +35,7 @@ Running this application will:
 Image of SQL DB in repo: file named SQLscreenshot.png
 * bamazon customer
 * http://recordit.co/SUWscNbofM
-*bamazon manager
+* bamazon manager
 * http://recordit.co/wB3YHuGSgS
 ## Requires
 
