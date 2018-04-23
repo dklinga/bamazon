@@ -31,7 +31,7 @@ Running this application will:
     
     * Add New Product
 
-## Demo/Links
+## Demo/Links/Screenshot
 
 ## Requires
 
