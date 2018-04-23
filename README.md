@@ -32,3 +32,7 @@ Running this application will:
     * Add New Product
 
 ## Demo/Links
+
+## Requires
+Inquire npm 
+mysql npm
