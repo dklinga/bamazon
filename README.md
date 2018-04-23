@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this activity, we created an Amazon-like storefront with the MySQL. The app takes in orders from customers and deplete stock from the store's inventory. 
+In this activity, we created an Amazon-like storefront with the MySQL. The app takes in orders from customers and deplete stock from the store's inventory.  I ran out of time so wasn't able to work out all of the bugs.  Sorry!!! 
 
 Steps to run:
 1) Clone repo 
