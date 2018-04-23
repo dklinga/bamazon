@@ -34,6 +34,7 @@ Running this application will:
 ## Demo/Links/Screenshot
 Image of SQL DB in repo: file named SQLscreenshot.png
 * http://recordit.co/SUWscNbofM
+* http://recordit.co/wB3YHuGSgS
 ## Requires
 
 * Inquire npm 
