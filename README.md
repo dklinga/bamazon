@@ -35,5 +35,5 @@ Running this application will:
 
 ## Requires
 
-*Inquire npm 
-*mysql npm
+* Inquire npm 
+* mysql npm
