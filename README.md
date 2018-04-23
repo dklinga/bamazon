@@ -32,7 +32,7 @@ Running this application will:
     * Add New Product
 
 ## Demo/Links/Screenshot
-
+SQL DB in repo, file named SQLscreenshot.png
 ## Requires
 
 * Inquire npm 
