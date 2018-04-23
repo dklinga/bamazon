@@ -8,8 +8,8 @@ Steps to run:
 1) Clone repo 
 2) npm install 
 3) commands 
-node bamazonCustomer.js
-node bamazonManager.js
+* node bamazonCustomer.js
+* node bamazonManager.js
 
 
 
