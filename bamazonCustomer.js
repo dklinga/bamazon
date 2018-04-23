@@ -39,7 +39,7 @@ function start() {
       },
       {
         type: "input",
-        name: "qty",
+        name: "stock_quantity",
         message: "How much would you like to purchase?",
         validate: function (value) {
           if (isNaN(value)) {
@@ -50,40 +50,38 @@ function start() {
         }
       }
     ]).then(function (ans) {
-      var whatToBuy = (ans.id) - 1;
-      var howMuchToBuy = parseInt(ans.qty);
-      var grandTotal = parseFloat(((res[whatToBuy].Price) * howMuchToBuy).toFixed(2));
+      var idBuy = (ans.id) - 1;
+      var quantityToBuy = parseInt(ans.stock_quantity);
+      var total = parseFloat(((res[idBuy].price) * quantityToBuy).toFixed(2));
 
       //check if quantity is sufficient
-      if (res[whatToBuy].stock_quantity >= howMuchToBuy) {
+      if (res[idBuy].stock_quantity >= quantityToBuy) {
         //after purchase, updates quantity in Products
-        connection.query("UPDATE Products SET ? WHERE ?", [{
-            stock_quantity: (res[whatToBuy].stock_quantity - howMuchToBuy)
+        connection.query("UPDATE products SET ? WHERE ?", [{
+            stock_quantity: (res[idBuy].stock_quantity - quantityToBuy)
           },
           {
-            ItemID: ans.id
+            id: ans.id
           }
         ], function (err, result) {
           if (err) throw err;
-          console.log("Success! Your total is $" + grandTotal.toFixed(2) + ". Your item(s) will be shipped to you in 3-5 business days.");
+          console.log("Your total is $" + total.toFixed(2));
         });
 
-        connection.query("SELECT * FROM Departments", function (err, deptRes) {
+        connection.query("SELECT * FROM department_name", function (err, deptRes) {
           if (err) throw err;
           var index;
           for (var i = 0; i < deptRes.length; i++) {
-            if (deptRes[i].department_name === res[whatToBuy].department_name) {
+            if (deptRes[i].department_name === res[idBuy].department_name) {
               index = i;
             }
           }
 
-          //updates totalSales in departments table
-          connection.query("UPDATE Departments SET ? WHERE ?", [{
-              TotalSales: deptRes[index].TotalSales + grandTotal
-            },
+          //updates totalSales in departments 
+          connection.query("UPDATE products SET ? WHERE ?", [
             {
-              department_namee: res[whatToBuy].department_name
-            }
+              department_name: res[idBuy].department_name
+            },
           ], function (err, deptRes) {
             if (err) throw err;
           });
